@@ -1,0 +1,183 @@
+#1
+import random
+random_numbers = []
+
+for i in range(1000):
+	number = random.uniform(60, 70)
+	random_numbers.append(number)
+print(random_numbers)
+#2
+
+import random
+import statistics
+
+random_numbers = []
+
+for i in range(1000):
+  number = random.uniform(60, 70)
+  random_numbers.append(number)
+
+mean = statistics.mean(random_numbers)
+stdev = statistics.stdev(random_numbers)
+
+print("Mean of random_numbers: ", mean)
+print("Standard deviation of random_numbers: ", stdev)
+
+Mean of random_numbers:  64.95956482342264
+Standard deviation of random_numbers:  2.8908636520223325
+
+#3
+import random
+import statistics
+import matplotlib.pyplot as plt
+
+random_numbers = []
+
+for i in range(1000):
+  number = random.uniform(60, 70)
+  random_numbers.append(number)
+
+mean = statistics.mean(random_numbers)
+stdev = statistics.stdev(random_numbers)
+
+plt.hist(random_numbers, bins=20)
+plt.xlabel('Value')
+plt.ylabel('Frequency')
+plt.title('Histogram of Random Numbers')
+plt.axvline(mean, color='red', linestyle='dashed', linewidth=1)
+plt.axvline(mean - stdev, color='gray', linestyle='dashed', linewidth=1)
+plt.axvline(mean + stdev, color='gray', linestyle='dashed', linewidth=1)
+plt.show()
+
+
+
+
+#4
+import random
+import statistics
+
+random_numbers = []
+
+for i in range(1000):
+  number = random.uniform(60, 70)
+  random_numbers.append(number)
+
+sample = random.sample(random_numbers, 30)
+
+print("Sample of 30 numbers:", sample)
+
+#5
+import random
+import statistics
+
+random_numbers = []
+
+for i in range(1000):
+  number = random.uniform(60, 70)
+  random_numbers.append(number)
+
+sample_means = []
+
+for i in range(500):
+  sample = random.sample(random_numbers, 30)
+  sample_mean = statistics.mean(sample)
+  sample_means.append(sample_mean)
+
+print("Sample means:", sample_means)
+
+
+#6
+import random
+import statistics
+
+random_numbers = []
+
+for i in range(1000):
+  number = random.uniform(60, 70)
+  random_numbers.append(number)#7
+import random
+import statistics
+import matplotlib.pyplot as plt
+
+random_numbers = []
+
+for i in range(1000):
+    number = random.uniform(60, 70)
+    random_numbers.append(number)
+
+sample_means = []
+
+for i in range(500):
+    sample = random.sample(random_numbers, 30)
+    sample_mean = statistics.mean(sample)
+    sample_means.append(sample_mean)
+
+plt.hist(sample_means)
+plt.xlabel("Sample Means")
+plt.ylabel("Frequency")
+plt.title("Histogram of Sample Means")
+plt.show()
+
+
+
+#8
+import random
+import statistics
+import numpy as np
+
+random_numbers = []
+
+for i in range(1000):
+    number = random.uniform(60, 70)
+    random_numbers.append(number)
+
+sample_means = []
+
+for i in range(500):
+    sample = random.sample(random_numbers, 30)
+    sample_mean = statistics.mean(sample)
+    sample_means.append(sample_mean)
+
+mean_of_sample_means = np.mean(sample_means)
+std_of_sample_means = np.std(sample_means)
+
+print("Mean of Sample Means:", mean_of_sample_means)
+print("Standard Deviation of Sample Means:", std_of_sample_means)
+
+
+Mean of Sample Means: 64.91623302257665
+Standard Deviation of Sample Means: 0.5196786776089055
+
+#10
+import random
+import statistics
+import matplotlib.pyplot as plt
+
+random_numbers = []
+
+for i in range(1000):
+    number = random.uniform(60, 70)
+    random_numbers.append(number)
+
+sample_means = []
+
+for i in range(500):
+    sample = random.sample(random_numbers, 50)
+    sample_mean = statistics.mean(sample)
+    sample_means.append(sample_mean)
+
+plt.hist(sample_means)
+plt.xlabel("Sample Means")
+plt.ylabel("Frequency")
+plt.title("Histogram of Sample Means (n=50)")
+plt.show()
+
+sample_means = []
+
+for i in range(500):
+  sample = random.sample(random_numbers, 30)
+  sample_mean = statistics.mean(sample)
+  sample_means.append(sample_mean)
+
+print("Sample means:", sample_means)
+
